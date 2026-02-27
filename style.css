@@ -5,7 +5,7 @@
 }
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 ul {
@@ -19,6 +19,13 @@ li a {
   justify-content: space-between;
   align-items: center;
   padding-top: 27px;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 .logo {
   display: flex;
@@ -40,8 +47,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-left: 237px;
+  gap: 24px;
 }
 nav ul a {
   color: #22343d;
@@ -76,78 +82,63 @@ nav ul a:hover {
 .menu {
   display: none;
 }
-/* @media (min-width: 480px) {
-  .container {
-    width: 100%;
-    min-width: 480px;
-    margin: 0 auto;
-  }
-  .product {
-    padding: 20px 0px 24px 30px;
-  }
-  nav {
-    display: none;
-  }
-  .btn {
-    display: none;
-  }
-  .circle {
+@media (max-width: 420px) {
+  .navbar {
     display: none;
   }
   .menu {
-    display: flex;
-    margin-right: 70px;
+    display: block;
   }
-} */
+  .product {
+    padding: 17px 32px;
+  }
+}
 
 /* Work section */
-.work .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 145px;
-}
-.speed {
+
+.work .speed {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  width: 1.091px;
-  height: 555px;
-  padding: 105px;
+  width: 100%;
 }
-.speed-right h1 {
+.speed-text h1 {
+  font-family: Arial, Helvetica, sans-serif;
   color: #22343d;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  width: 518px;
-  height: 120px;
+  width: 370px;
 }
-.speed-right h1 span {
-  display: block;
-}
-.speed-right p {
+
+.speed-text p {
+  font-family: Arial, Helvetica, sans-serif;
   color: #22343d;
   padding-top: 18px;
   line-height: 28px;
-  width: 458px;
+  width: 350px;
   height: 95px;
 }
-
-.get-started {
-  padding-top: 45px;
-  gap: 30px;
+.speed-right{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   justify-content: start;
+  gap: 45px;
+}
+.get-started {
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ gap: 28px;
+
 }
 .get-started .start {
-  width: 175px;
-  height: 53px;
-  background-color: #02897a;
   color: #fff;
+  background-color: #02897a;
+  padding: 15px 20px;
 }
-.get-started .icon i {
+.get-started .icon i{
   color: #02897a;
   width: 20px;
   height: 17px;
@@ -162,7 +153,7 @@ nav ul a:hover {
   color: #02897a;
   width: 135px;
   height: 24px;
-  margin-left: 6px;
+  padding-left: 6px;
 }
 .work-img img {
   width: 600px;
@@ -179,9 +170,7 @@ nav ul a:hover {
     align-items: center;
     justify-content: center;
   }
-  br {
-    display: none;
-  }
+
   .speed {
     display: flex;
     align-items: center;
@@ -202,34 +191,41 @@ nav ul a:hover {
     order: 2;
   }
   .speed-right {
-    width: 369px;
-    height: 316px;
-    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
   }
   .speed-right h1 {
-    width: 369px;
-    height: 120px;
-    margin-left: 24px;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 60px;
+    text-align: center;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 120px;
   }
   .speed-right p {
+    font-family: Arial, Helvetica, sans-serif;
     width: 326px;
     height: 95px;
-    margin-left: 30px;
     font-size: 18px;
     line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .get-started {
     padding-top: 32px;
     gap: 28px;
-    width: 340px;
-    height: 53px;
-    margin-left: 30px;
-  }
-  .get-started .start {
-    width: 142px;
+    width: 175px;
     height: 53px;
   }
+
   .get-started .icon li a {
     width: 194px;
     height: 24px;
@@ -237,13 +233,20 @@ nav ul a:hover {
 }
 
 /* Built section */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .built {
-  padding-top: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 115px;
+}
+.built-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 34px;
 }
 .built .title {
   display: flex;
@@ -252,11 +255,13 @@ nav ul a:hover {
   color: #22343d;
   padding-bottom: 58px;
 }
+
 .stikers {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 46px;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
 }
 .stiker .point {
   background-color: #02897a;
@@ -303,10 +308,92 @@ nav ul a:hover {
   font-weight: 600;
   padding-bottom: 13px;
   padding-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .stiker p {
   color: #22343d;
   font-weight: 400;
   line-height: 26px;
   padding-bottom: 34px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 230px;
+  height: 52px;
 }
+.sing {
+ 
+   color: #fff;
+  background-color: #02897a;
+  padding: 15px 20px;
+}
+
+@media (max-width: 420px) {
+  .built .title {
+    width: 331px;
+    height: 96px;
+  }
+
+  .built-home {
+  }
+  .stikers {
+    flex-direction: column;
+  }
+}
+
+/* Management section */
+.management{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 85px;
+}
+.management .about{
+  margin-top: 125px;
+  width: 486px;
+  height: 435px;
+  margin-left: 120px; 
+}
+
+.management .about h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #22343D;
+  margin-top: 40px ;
+}
+.management .about h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #22343D;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.management .about p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 350px;
+  height: 78px;
+}
+.management .about .title {
+  margin-top: 12px;
+}
+.management .about .makers {
+  margin-top: 30px;
+}
+.management .img{
+margin-top: 147px;
+}
+    /* Customer section  */
+
+    .customer{
+      margin-top: 150px;
+      width: 1123px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
