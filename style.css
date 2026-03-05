@@ -344,7 +344,10 @@ nav ul a:hover {
 .management .about {
   width: 486px;
   height: 435px;
-  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 
 .management .about h4 {
@@ -377,6 +380,7 @@ nav ul a:hover {
 
 .management .img {
   margin-top: 100px;
+ 
 }
 @media (max-width: 420px) {
   .management {
@@ -400,12 +404,10 @@ nav ul a:hover {
 
 .customer {
   margin-top: 150px;
-  width: 1123px;
-  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 500px;
 }
 
 .customer .img {
@@ -771,7 +773,7 @@ nav ul a:hover {
 .price .card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 50px;
   gap: 72px;
   color: #22343d;
@@ -893,22 +895,27 @@ nav ul a:hover {
   align-items: center;
   justify-content: space-between;
   padding-top: 50px;
-  margin-left: 145px;
   gap: 64px;
 }
 .price .goal {
   width: 327px;
-  height: 236px;
+  height: 280px;
   border-radius: 5px;
   border: 1px solid #dedede;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 28px;
 }
 .goal i {
   padding-top: 28px;
   color: #f3cd03;
   padding-bottom: 16px;
-  font-size: 30px;
+  font-size: 15px;
   cursor: pointer;
   transition: 0.2s;
+  
 }
 
 .goal i.active {
@@ -919,10 +926,8 @@ nav ul a:hover {
   font-weight: 400;
   line-height: 28px;
   color: #737373;
-  margin-left: 15px;
 }
 .profil img {
-  margin-left: 50px;
   height: 50px;
   width: 50px;
 }
